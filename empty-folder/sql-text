@@ -1,0 +1,27 @@
+-- Создание таблицы
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE,
+    Position VARCHAR(50)
+);
+
+-- Вставка данных в таблицу
+INSERT INTO Employees (EmployeeID, FirstName, LastName, BirthDate, Position)
+VALUES (1, 'John', 'Doe', '1980-01-01', 'Manager');
+
+-- Выбор всех данных из таблицы
+SELECT * FROM Employees;
+
+-- Выбор данных с условием
+SELECT FirstName, LastName FROM Employees WHERE Position = 'Manager';
+
+-- Обновление данных в таблице
+UPDATE Employees
+SET Position = 'Senior Manager'
+WHERE EmployeeID = 1;
+
+-- Удаление данных из таблицы
+DELETE FROM Employees
+WHERE EmployeeID = 1;
